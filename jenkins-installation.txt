@@ -1,0 +1,30 @@
+# Install Java 8
+
+sudo yum install java-1.8.0-openjdk-devel
+
+# Check java version 
+
+java -version
+
+# Import GPG Key
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+# Install Java
+
+ yum install jenkins
+
+# enable the Jenkins service to start on system boot.
+
+sudo systemctl start jenkins
+
+systemctl status jenkins
+
+sudo systemctl enable jenkins
+
+#Access Jenkins server
+
+localhost:8080
+
